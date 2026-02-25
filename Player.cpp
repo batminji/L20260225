@@ -1,21 +1,68 @@
 #include "Player.h"
+#include "Map.h"
 
-int Player::GetX()
+Player::Player()
 {
-    return 0;
+	X = 1;
+	Y = 1;
 }
 
-int Player::GetY()
+Player::Player(int X, int Y)
 {
-    return 0;
+	if (X < 0 || X >= 10 || Y < 0 || Y >= 10)
+	{
+		X = 1;
+		Y = 1;
+	}
+	else
+	{
+		X = X;
+		Y = Y;
+	}
 }
 
-int Player::AddXPos(int inc)
+void Player::Move(int Input, Map& Map)
 {
-    return 0;
+	if (Input == 'W' || Input == 'w' || Input == 72)
+	{
+		--Y;
+		if (Map.GetTile(X, Y) == 1)
+		{
+			++Y;
+		}
+	}
+	if (Input == 'S' || Input == 's' || Input == 80)
+	{
+		++Y;
+		if (Map.GetTile(X, Y) == 1)
+		{
+			--Y;
+		}
+	}
+	if (Input == 'A' || Input == 'a' || Input == 75)
+	{
+		--X;
+		if (Map.GetTile(X, Y) == 1)
+		{
+			++X;
+		}
+	}
+	if (Input == 'D' || Input == 'd' || Input == 77)
+	{
+		++X;
+		if (Map.GetTile(X, Y) == 1)
+		{
+			--X;
+		}
+	}
 }
 
-int Player::AddYPos(int inc)
+int Player::GetX() const
 {
-    return 0;
+	return X;
+}
+
+int Player::GetY() const
+{
+	return Y;
 }

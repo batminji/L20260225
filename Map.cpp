@@ -51,7 +51,7 @@ void Map::Render(int PlayerX, int PlayerY)
     }
 }
 
-int Map::GetTile(int X, int Y)
+int Map::GetTile(int X, int Y) const
 {
     return Data[Y][X];
 }

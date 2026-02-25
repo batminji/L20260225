@@ -6,6 +6,6 @@ class Map
 public:
 	Map();
 	void Render(int PlayerX, int PlayerY);
-	int GetTile(int X, int Y);
+	int GetTile(int X, int Y) const;
 };
 
