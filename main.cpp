@@ -7,9 +7,9 @@ int main()
 		{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
 		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
 		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
 		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
 		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
@@ -44,7 +44,7 @@ int main()
 		if (Temp == 'W' || Temp == 'w')
 		{
 			--PlayerY;
-			if (PlayerY == 0)
+			if (Map[PlayerY][PlayerX] == 1)
 			{
 				++PlayerY;
 			}
@@ -52,7 +52,7 @@ int main()
 		else if (Temp == 'S' || Temp == 's')
 		{
 			++PlayerY;
-			if (PlayerY == 9)
+			if (Map[PlayerY][PlayerX] == 1)
 			{
 				--PlayerY;
 			}
@@ -60,7 +60,7 @@ int main()
 		else if (Temp == 'A' || Temp == 'a')
 		{
 			--PlayerX;
-			if (PlayerX == 0)
+			if (Map[PlayerY][PlayerX] == 1)
 			{
 				++PlayerX;
 			}
@@ -68,10 +68,14 @@ int main()
 		else if (Temp == 'D' || Temp == 'd')
 		{
 			++PlayerX;
-			if (PlayerX == 9)
+			if (Map[PlayerY][PlayerX] == 1)
 			{
 				--PlayerX;
 			}
+		}
+		else if (Temp == 'Q' || Temp == 'q')
+		{
+			return 0;
 		}
 		system("cls");
 	}
