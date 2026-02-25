@@ -2,13 +2,13 @@
 
 int main()
 {
-	int Array[10] = {};
-	
-	for (int i = 0; i < 10; ++i)
-	{
-		std::cout << Array[i] << " ";
-	}
-	std::cout << std::endl;
+	int SumResult = 0;
 
+	for (int i = 1; i < 101; ++i)
+	{
+		SumResult += i;
+	}
+
+	std::cout << SumResult << '\n';
 	return 0;
 }
