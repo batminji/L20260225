@@ -17,5 +17,6 @@ int main()
 	std::cout << Num1 << " / " << Num2 << " = " << Num1 / Num2 << '\n';
 	std::cout << Num1 << " % " << Num2 << " = " << Num1  % Num2 << '\n';
 
+	// 이것은 집에서 수정한 것이다!
 	return 0;
 }
