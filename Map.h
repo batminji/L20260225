@@ -1,11 +1,11 @@
 #pragma once
 class Map
 {
-	int arr[10][10];
+	int Data[10][10];
 
 public:
 	Map();
-	int GetTile(int x, int y);
-	void Render();
+	void Render(int PlayerX, int PlayerY);
+	int GetTile(int X, int Y);
 };
 
