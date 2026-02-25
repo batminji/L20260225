@@ -2,8 +2,8 @@
 
 int main()
 {
-	int Num1{};
-	int Num2{};
+	int Num1 = 0;
+	int Num2 = 0;
 
 	// std::cin 같은 경우 한 번에 받지 말 것
 	std::cout << "첫 번째 숫자를 입력하세요 : ";
