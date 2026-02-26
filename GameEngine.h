@@ -4,13 +4,13 @@
 
 class GameEngine
 {
-	Map map;
-	Player player;
+	Map MyMap;
+	Player MyPlayer;
 
+	bool bIsGameOver;
 public:
 	GameEngine();
 	void Run();
-	~GameEngine();
 
 private:
 	void Input();
