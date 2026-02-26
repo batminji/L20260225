@@ -41,7 +41,7 @@ void GameEngine::Render()
     system("cls");
     MyMap.Render(MyPlayer.GetX(), MyPlayer.GetY());
 
-    if (bIsGameOver) 
+    if (bIsGameOver)
     {
         std::cout << "탈출 성공! 게임을 종료합니다." << std::endl;
     }
